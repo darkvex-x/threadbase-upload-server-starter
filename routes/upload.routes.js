@@ -1,11 +1,12 @@
-﻿import { Router } from "express";
+﻿
+import { Router } from "express";
 import verifyToken from "../middleware/verifyToken.js";
 import upload from "../config/upload.js";
 
 const router = Router();
 
 router.post(
-  "/avatar",
+  "/",
   verifyToken,
   upload.single("avatar"),
   (req, res) => {
